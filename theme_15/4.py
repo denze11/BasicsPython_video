@@ -15,4 +15,3 @@ def error_detect(item):
 	else:
 		return ('Вы ввели число меньше 0 или больше 100')
 
-print(error_detect(numbers))
