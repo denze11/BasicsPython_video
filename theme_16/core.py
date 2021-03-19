@@ -2,6 +2,7 @@
 import os
 import shutil
 import datetime
+import random
 
 
 def create_file(name, text=None):
@@ -58,6 +59,23 @@ def save_info(message):
 		f.write(result + '\n')
 
 
+def guess_the_number():
+	user_number = None
+	number_one = 1
+	number_two = 100
+	while user_number != '=':
+		pc_number = random.randint(number_one, number_two)
+		print(pc_number)
+		user_number = input('Введите значение >, < или =: ')
+		if user_number == '>':
+			print('Число больше')
+			number_one = pc_number + 1
+		elif user_number == '<':
+			print('Число меньше')
+			number_two = pc_number - 1
+	print('Число угадано!')
+
+
 if __name__ == '__main__':
 	create_file('theme_16/text.dat')
 	create_file('theme_16/text.dat', text='some text')
@@ -70,3 +88,4 @@ if __name__ == '__main__':
 	copy_file('theme_16/new_f', 'theme_16/new_2')
 	copy_file('theme_16/text.dat', 'theme_16/text2.dat')
 	save_info('abc')
+	guess_the_number()

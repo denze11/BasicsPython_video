@@ -1,4 +1,4 @@
-player_name = input('Введте имя игрока: ')
+player_name = input('Введите имя игрока: ')
 player = {
 	'name': player_name,
 	'health': 100,
@@ -6,7 +6,7 @@ player = {
 }
 
 
-enemy_name = input('Введите имя врана: ')
+enemy_name = input('Введите имя врага: ')
 enemy = {
 	'name': enemy_name,
 	'health': 100,

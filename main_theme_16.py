@@ -1,5 +1,5 @@
 import sys
-from theme_16.core import create_file, create_folder, get_list, delete_file, copy_file, save_info
+from theme_16.core import create_file, create_folder, get_list, delete_file, copy_file, save_info, guess_the_number
 
 
 command = sys.argv[1]
@@ -43,5 +43,7 @@ elif command == 'help':
 	print('create_folder - создание папки')
 	print('delete - удаление файла или папки')
 	print('copy - копирование файла или папки')
+elif command == 'guess':
+	guess_the_number()
 else:
 	print('Неизвестная команда введите help чтобы увидеть доступные')
